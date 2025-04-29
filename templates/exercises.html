@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Workout</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='workout.css') }}">
+    </head>
+    <body>
+        {% if username %}
+        <h1>Welcome {{ username }}</h1><br>
+        {% endif %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    {% for key in stats.values()|list|first %}
+                        <th>{{ key }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for name, info in stats.items() %}
+                    <tr>
+                        <td>{{ name }}</td>
+                        {% for value in info.values() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Workout</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='workout.css') }}">
+    </head>
+    <body>
+        {% if username %}
+        <h1>Welcome {{ username }}</h1><br>
+        {% endif %}
+        <h2>First, what equipment do you have?</h2>
+        <form action="{{ url_for('workouts') }}" method="post">
+            <a>Bands</a>
+            <input type="checkbox" name="item" value="bands">
+            <a>Barbell</a>
+            <input type="checkbox" name="item" value="barbell">
+            <a>Cable</a>
+            <input type="checkbox" name="item" value="cable">
+            <a>Dumbell</a>
+            <input type="checkbox" name="item" value="dumbell">
+            <a>EZ Curl Bar</a>
+            <input type="checkbox" name="item" value="e-z curl bar">
+            <a>Exercise Ball</a>
+            <input type="checkbox" name="item" value="exercise ball">
+            <a>Foam Roll</a>
+            <input type="checkbox" name="item" value="foam roll">
+            <a>Kettlebells</a>
+            <input type="checkbox" name="item" value="kettlebells">
+            <a>Machine</a>
+            <input type="checkbox" name="item" value="machine">
+            <a>Medicine Ball</a>
+            <input type="checkbox" name="item" value="medicine ball">
+            <a>None</a>
+            <input type="checkbox" name="item" value="none">
+            <button type="submit">Submit</button>
+        </form>
+
+    </body>
+</html>

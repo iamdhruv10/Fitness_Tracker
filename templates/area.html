@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Workout</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='workout.css') }}">
+    </head>
+    <body>
+        <img src="{{ url_for('static', filename='images/front_diagram.png') }}" 
+        alt="Front Diagram of Muscles"
+        style="position: fixed; left: 20px; top: 100px; width: 300px; height: auto; z-index: 1000; border: 2px solid #ccc; border-radius: 8px;">>
+        <img src="{{ url_for('static', filename='images/back_diagram.png') }}" 
+        alt="Front Diagram of Muscles"
+        style="position: fixed; right: 20px; top: 100px; width: 300px; height: auto; z-index: 1000; border: 2px solid #ccc; border-radius: 8px;">>
+        {% if username %}
+        <h1>Welcome {{ username }}</h1><br>
+        {% endif %}
+        <h2>Finally, What area do you want to target?:</h2>
+        <form action="{{ url_for('exercises') }}" method="post">
+            <a>Abdominals</a>
+            <input type="checkbox" name="item" value="abdominals">
+            <a>Abductors</a>
+            <input type="checkbox" name="item" value="abductors">
+            <a>Bicepts</a>
+            <input type="checkbox" name="item" value="bicepts">
+            <a>Calves</a>
+            <input type="checkbox" name="item" value="calves">
+            <a>Chest</a>
+            <input type="checkbox" name="item" value="chest">
+            <a>Forearms</a>
+            <input type="checkbox" name="item" value="forearms">
+            <a>Glutes</a>
+            <input type="checkbox" name="item" value="glutes">
+            <a>Hamstrings</a>
+            <input type="checkbox" name="item" value="hamstrings">
+            <a>Lats</a>
+            <input type="checkbox" name="item" value="Lats">
+            <a>Lower Back</a>
+            <input type="checkbox" name="item" value="lower back">
+            <a>Middle Back</a>
+            <input type="checkbox" name="item" value="middle back">
+            <a>Neck</a>
+            <input type="checkbox" name="item" value="neck">
+            <a>Quadricepts</a>
+            <input type="checkbox" name="item" value="quadricepts">
+            <a>Shoulders</a>
+            <input type="checkbox" name="item" value="shoulders">
+            <a>Traps</a>
+            <input type="checkbox" name="item" value="traps">
+            <a>Triceps</a>
+            <input type="checkbox" name="item" value="triceps">
+            <button type="submit">Submit</button>
+        </form>
+
+    </body>
+</html>

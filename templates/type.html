@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Workout</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='workout.css') }}">
+    </head>
+    <body>
+        {% if username %}
+        <h1>Welcome {{ username }}</h1><br>
+        {% endif %}
+        <h2>Next, what type of exercise do you want to do?:</h2>
+        <form action="{{ url_for('area') }}" method="post">
+            <a>Cardio</a>
+            <input type="checkbox" name="item" value="cardio">
+            <a>Olympic Weightlifting</a>
+            <input type="checkbox" name="item" value="olympic weightlifting">
+            <a>Plyometrics</a>
+            <input type="checkbox" name="item" value="plyometrics">
+            <a>Powerlifting</a>
+            <input type="checkbox" name="item" value="powerlifting">
+            <a>Strength</a>
+            <input type="checkbox" name="item" value="strength">
+            <a>Stretching</a>
+            <input type="checkbox" name="item" value="stretching">
+            <a>Strongman</a>
+            <input type="checkbox" name="item" value="strongman">
+            <button type="submit">Submit</button>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    background-color: #f4f9fd; 
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container {
+    width: 100%;
+    max-width: 900px; 
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.container:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: #4c6e91; 
+    font-family: 'Garamond', serif;
+    font-size: 45px;
+    font-weight: 600; 
+    margin-bottom: 20px; 
+    text-align: top;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    color: #4c6e91; 
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px; 
+    padding-top: 30px;
+
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #4c6e91; /* Soft blue background for the button */
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #3a5577; /* Darker blue on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Input field styling */
+input[type="text"], input[type="password"], input[type = 'number'], select {
+    width: 80%; /* Make the width 80% of the container width */
+    padding: 10px; /* Slightly smaller padding for a more compact look */
+    font-size: 16px;
+    border: 2px solid #d1e0e6; /* Light border */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space below the input fields */
+    transition: border-color 0.3s ease;
+    text-align: center; /* Center text in input fields */
+}
+
+/* Focus effect */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #4c6e91; /* Highlight border color on focus */
+    outline: none;
+}
+
+/* Add some spacing for form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    text-align: center;
+}
+
+/* Links styling */
+a {
+    color: #4c6e91;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+select{
+    color: gray;    
+}
+
+select option {
+    color: black;
+}
